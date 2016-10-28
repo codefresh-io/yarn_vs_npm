@@ -20,5 +20,6 @@ steps:
     working-directory: ${{initial-clone}}
     commands:
       - rm -r node_modules
+      - ls ./node_modules
       - yarn install
       - node ./works.js
