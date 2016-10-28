@@ -1,5 +1,5 @@
 version: '1.0'
-## develop 
+## develop
 steps:
   build-example:
     type: build
@@ -12,7 +12,7 @@ steps:
     image: node:latest
     working-directory: ${{initial-clone}}
     commands:
-      - yarn install
+      - npm install
 
   yarn-install-test:
     image: codefresh-io/node-yarn:latest
