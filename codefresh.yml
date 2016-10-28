@@ -1,6 +1,13 @@
 version: '1.0'
 
 steps:
+  build-example:
+    type: build
+    description: build yarn 
+    image-name: codefresh-io/node-yarn
+    dockerfile: ./node_yarn/Dockerfile
+    tag: latest
+
   npm-install-test:
     image: node:latest
     commands:
