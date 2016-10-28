@@ -10,10 +10,12 @@ steps:
 
   npm-install-test:
     image: node:latest
+    working-directory: ${{initial-clone}}
     commands:
       - yarn install
 
   yarn-install-test:
     image: codefresh-io/node-yarn:latest
+    working-directory: ${{initial-clone}}
     commands:
       - yarn install
