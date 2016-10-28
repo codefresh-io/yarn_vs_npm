@@ -1,0 +1,12 @@
+version: '1.0'
+
+steps:
+  npm-install-test:
+    image: node:latest
+    commands:
+      - yarn install
+
+  yarn-install-test:
+    image: node_yarn:latest
+    commands:
+      - yarn install
