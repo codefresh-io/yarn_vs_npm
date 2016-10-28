@@ -13,9 +13,12 @@ steps:
     working-directory: ${{initial-clone}}
     commands:
       - npm install
+      - node ./works.js
 
   yarn-install-test:
     image: codefresh-io/node-yarn:latest
     working-directory: ${{initial-clone}}
     commands:
+      - rm -r node_modules
       - yarn install
+      - node ./works.js
