@@ -1,11 +1,11 @@
-'use strict'
+'use strict';
 
 const os = require('os');
 
 const IGNORE_INTERFACES = ['lo0', 'awdl0', 'bridge0'];
 const LOCAL_IPS = ['127.0.0.1', '::1'];
 
-export function isOffline(): boolean {
+module.exports = function isOffile(){
   let interfaces;
 
   try {
@@ -22,6 +22,7 @@ export function isOffline(): boolean {
   }
 
   for (const name in interfaces) {
+    console.log(`interface is ${name}`);
     if (IGNORE_INTERFACES.indexOf(name) >= 0) {
       continue;
     }

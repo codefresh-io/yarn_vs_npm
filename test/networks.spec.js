@@ -3,7 +3,7 @@ var assert = require('assert');
 
 describe('os tests', ()=>{
   it('interfaces', ()=>{
-     var nt = require('../network_os');
-     assert(!nt.isOffline());
+     var isOffline = require('../network_os');
+     assert(!isOffline());
   });
 })
