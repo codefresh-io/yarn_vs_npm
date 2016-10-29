@@ -8,6 +8,13 @@ steps:
     dockerfile: ./node_yarn/Dockerfile
     tag: latest
 
+  test:
+    image: node:latest
+    working-directory: ${{initial-clone}}
+    commands:
+        - npm install -g mocha
+
+
   npm-install-test:
     image: node:latest
     working-directory: ${{initial-clone}}
@@ -21,4 +28,5 @@ steps:
     commands:
       - rm -r node_modules
       - yarn install
+      - mocha ./test/networks.spec.js
       - node ./works.js
