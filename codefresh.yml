@@ -27,7 +27,7 @@ steps:
     working-directory: ${{initial-clone}}
     commands:
       - rm -r node_modules
-      - npm install -g mocha
+      - yarn  global add mocha
       - yarn install
       - mocha ./test/networks.spec.js
       - node ./works.js
